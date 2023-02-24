@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 
 function Register() {
+    
     var err = 1;
     const [input, setInput] = useState({});
 
@@ -56,35 +57,64 @@ function Register() {
 
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         if(err==0)
-            localStorage.setItem("userDetails", JSON.stringify(input));
+
+            await fetch("https://zpworkshopapis.netlify.app/.netlify/functions/account/signup",
+            {
+                method: "POST",
+
+     
+    // Adding body or contents to send
+    body: JSON.stringify({
+        username: input.username,
+        name: input.name,
+        password: input.password,
+    })
+            }
+            ).then(response => response.json())
+ 
+            // Displaying results to console
+            .then((json) =>{
+                console.log(json);
+            } )
+            // localStorage.setItem("userDetails", JSON.stringify(input));
         else
             alert(msg)
         console.log("output---" + input.username)
     };
     console.log(input);
     return (
-        <div>
+        <div class="box">
             <h1>REGISTRATION</h1>
             <form>
-                <label>Username</label>
+            <div class="tx1">
+                <label>USERNAME</label>
                 <input type="text" name="username" onChange={handleChange}></input>
                 <br />
 
-                <label>Password</label>
-                <input type="text" name="password" onChange={handleChange} onBlur={handlePassword}></input>
+                <label>NAME</label>
+                <input type="text" name="name" id="pro1" onChange={handleChange}></input>
                 <br />
 
-
-                <button onClick={handleSubmit}>Save</button>
+                <label>PASSWORD</label>
+                <input type="text" name="password" id="pro2" onChange={handleChange} onBlur={handlePassword}></input>
                 <br />
-                <button onClick={handleClear}>Clear</button>
+            </div>  
+
+                <div class="b1">
+                <button id="b3" onClick={handleSubmit}>Register</button>
+                </div>
+                <div class="b2">
+                <button id="b4" onClick={handleClear}>Clear</button>
+                </div>
+                
+
             </form>
         </div>
     )
 }
 
-export default Register
+export default Register;

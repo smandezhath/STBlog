@@ -14,15 +14,89 @@
 }
 
 .App-header {
-  background-color: #2b4b8a;
+  background-color: #15439f;
+  background-image: url("C:\Users\Nikhil Biju\Downloads\modern-white-background-free-vector.png");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  font-family:'Montserrat';
+  color: rgb(41, 24, 149);
+  margin-left:0cm;
 }
+
+input[type=text] {
+  border: 1px solid #281d6e;
+  border-radius: 4px;
+  margin-left: 1cm;
+  font-family: 'Poppins';
+  
+}
+
+#pro1{
+  margin-left: 2.8cm;
+}
+
+#pro2{
+  margin-left: 0.9cm;
+}
+
+.tx1{
+  margin-left: 0.3cm;
+}
+
+.b1{
+  background-color: #281d6e;
+  margin-top: 1cm;
+  font-family: 'Montserrat';
+  margin-left:2.5cm ;
+  margin-right:1cm;
+  border: none;
+  border-radius: 4px;
+  color: rgb(186, 184, 243);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.b2{
+  background-color: #281d6e;
+  
+  border: none;
+ margin-top:1cm;
+  border-radius: 4px;
+  color: rgb(186, 184, 243);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  
+}
+
+#b3{
+  /* padding:0px; */
+  background-color: #281d6e;
+  color:aliceblue;
+  border: 0cm;
+  border-radius: 2px;
+  font-family: 'Montserrat';
+}
+
+#b4{
+  /* padding:0px; */
+  background-color: #281d6e;
+  color:aliceblue;
+  border: 0cm;
+  border-radius: 2px;
+  font-family: 'Montserrat';
+}
+
 
 .App-link {
   color: #61dafb;
@@ -36,3 +110,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* .box {
+  height: 7cm;
+  width: 7cm;
+  background-color: #e8eaf7;
+} */
