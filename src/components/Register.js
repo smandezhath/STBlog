@@ -68,6 +68,7 @@ function Register() {
     console.log(input);
     return (
         <div>
+            <h1>REGISTRATION</h1>
             <form>
                 <label>Username</label>
                 <input type="text" name="username" onChange={handleChange}></input>
