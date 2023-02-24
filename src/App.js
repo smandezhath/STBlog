@@ -9,8 +9,8 @@ function App() {
   return(
     <>
     <h1>hiii</h1>
-        {/* <Register></Register> */}
-        {/* <Viewpost id={"63edd604db82459d946f09a1"}/> */}
+        <Register></Register>
+        <Viewpost id={"63edd604db82459d946f09a1"}/>
         
        <NewPost />
     </>
