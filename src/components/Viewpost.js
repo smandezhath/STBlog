@@ -7,7 +7,7 @@ import React, {useState,useEffect} from 'react';
         await fetch(
         `https://zpworkshopapis.netlify.app/.netlify/functions/blog/${props.id}`,
             {
-                method:"GET",
+                method:"GET", 
                 // body:JSON.stringify(data),
             }
           )
